@@ -1,5 +1,9 @@
-import { Flex, FlexProps } from '@chakra-ui/react'
+import { Text, Center, Flex } from "@chakra-ui/react";
 
-export const Footer = (props: FlexProps) => (
-  <Flex as="footer" py="8rem" {...props} />
-)
+export const Footer = (props) => (
+  <Flex justifyContent={"flex-end"}>
+    <Center>
+      <Text>Footer</Text>
+    </Center>
+  </Flex>
+);

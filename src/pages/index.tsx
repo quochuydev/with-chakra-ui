@@ -1,56 +1,54 @@
-import {
-  Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
-} from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
-
-import { Hero } from '../components/Hero'
-import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+import { Text, Center, Flex, Input, Button } from "@chakra-ui/react";
+import { Container } from "../components/Container";
+import { Footer } from "../components/Footer";
 
 const Index = () => (
-  <Container height="100vh">
-    <Hero />
-    <Main>
-      <Text color="text">
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>TypeScript</Code>.
-      </Text>
+  <Container>
+    <Flex>
+      <Flex>
+        <Center>
+          <img src={"/images/logo.jpeg"} />
+        </Center>
+      </Flex>
 
-      <List spacing={3} my={0} color="text">
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
-    </Main>
+      <Flex>
+        <Center>
+          <Text>Job search</Text>
+        </Center>
+      </Flex>
+    </Flex>
 
-    <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
-    <CTA />
+    <Flex>
+      <Flex>
+        <Input placeholder="Basic usage" />
+      </Flex>
+      <Flex>
+        <Input placeholder="Basic usage" />
+      </Flex>
+      <Flex>
+        <Input placeholder="Basic usage" />
+      </Flex>
+      <Flex>
+        <Button>Job search</Button>
+      </Flex>
+    </Flex>
+
+    <Flex>
+      <Flex>
+        <Center>
+          <Text>Job list</Text>
+        </Center>
+      </Flex>
+
+      <Flex>
+        <Center>
+          <Text>Job detail</Text>
+        </Center>
+      </Flex>
+    </Flex>
+
+    <Footer />
   </Container>
-)
+);
 
-export default Index
+export default Index;
